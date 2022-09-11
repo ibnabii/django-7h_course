@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import Http404
 
+from .models import Room
+
 rooms = [
     {"id": 1, "name": "Pierwszy"},
     {"id": 2, "name": "Drugi"},
@@ -9,16 +11,15 @@ rooms = [
 
 
 def home(request):
+    rooms = Room.objects.all()
     context = {"rooms": rooms}
     return render(request, 'base/home.html', context)
 
 
-def room(request, id):
-    room = None
-    for i in rooms:
-        if i.get("id", None) == id:
-            room = i
-    if room is None:
+def room(request, pk):
+    try:
+        room = Room.objects.get(id=pk)
+    except Room.DoesNotExist:
         raise Http404
     context = {"room": room}
     return render(request, 'base/room.html', context)

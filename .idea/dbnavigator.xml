@@ -33,12 +33,15 @@
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="50153622-0b25-4779-b243-93a3dc890a65" object-ref="schemas/main/tables/base_room" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="50153622-0b25-4779-b243-93a3dc890a65" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="50153622-0b25-4779-b243-93a3dc890a65" dataset="main.base_room" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="50153622-0b25-4779-b243-93a3dc890a65" dataset="main.django_admin_log" active-filter-id="4800ce29-f630-47d0-b39b-f30cfaf1c3b1">
       <filter id="4800ce29-f630-47d0-b39b-f30cfaf1c3b1" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="id" operator="=" value="" active="true" />
